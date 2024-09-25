@@ -24,4 +24,4 @@ generateRobotsTxt();
 
 
 // npm run generate-robots-dev (development)
-// npm run npm run generate-robots-prod (production)
+// npm run generate-robots-prod (production)
