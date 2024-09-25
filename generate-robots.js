@@ -12,7 +12,7 @@ const generateRobotsTxt = () => {
     content = `User-agent: *\nDisallow: /`;
   } else if (env === 'production') {
     // Allow all pages in production environment
-    content = `User-agent: *\nAllow: /\n\nSitemap: http://localhost:5173/sitemap.xml`;
+    content = `User-agent: *\nAllow: /\n\nSitemap: https://chas-seo.vercel.app/sitemap.xml`;
   }
 
   // Write the content to robots.txt in public folder
@@ -21,3 +21,7 @@ const generateRobotsTxt = () => {
 };
 
 generateRobotsTxt();
+
+
+// npm run generate-robots-dev (development)
+// npm run npm run generate-robots-prod (production)
