@@ -1,19 +1,22 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaBriefcase, FaWindowMaximize, FaDatabase, FaRobot, FaFileAlt, FaUsers } from "react-icons/fa";
 import Cta from '../components/Cta';
 
-const About = () => {
+const Project = () => {
   return (
     <>
       <Helmet>
-        <title>About - Özay Özdemir Portfolio</title>
-        <meta name="description" content="Learn more about Özay Özdemir, a front-end developer and UI/UX designer." />
+        <title>Project - My Website</title>
+        <meta name="description" content="Explore our latest projects and works." />
+        <meta property="og:title" content="Projects - My Website" />
+        <meta property="og:description" content="Discover the latest projects and innovations from our team." />
       </Helmet>
-
-      <section className="mt-5 md:mt-16 mb-20 pb-16">
+    
+       <section className="mt-5 md:mt-16 mb-20 pb-16">
       <div>
         <h1 className="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-          About us
+          The Project
         </h1>
         <p className="text-lg mt-4 text-slate-600">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium praesentium accusamus ullam. <br />Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ad totam, vitae officiis, recusandae deserunt a dolore asperiores, neque nisi omnis nobis autem quas minus laborum numquam quidem dolor debitis.
@@ -74,4 +77,5 @@ const About = () => {
   );
 };
 
-export default About;
+export default Project;
+

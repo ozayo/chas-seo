@@ -6,7 +6,11 @@ const MainHero = () => {
   return (
     <section className="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
       <div className="py-6 md:order-1 hidden md:block">
-        <img src={heroImg} alt="hero image"/>
+        {/* <img src={heroImg} alt="hero image"/> */}
+        <picture>
+          <source srcSet="/hero.webp" type="image/webp" />
+          <img src="/hero.jpg" alt="Hero image" loading="lazy" />
+        </picture>
       </div>
       <div>
         <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">

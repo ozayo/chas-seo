@@ -26,7 +26,7 @@ const generateSitemap = () => {
 
   sitemap += `</urlset>`;
 
-  // Sitemap.xml dosyasını public klasörüne kaydet
+  //write Sitemap.xml in public folder
   writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap, 'utf8');
   console.log('Sitemap has been generated.');
 };

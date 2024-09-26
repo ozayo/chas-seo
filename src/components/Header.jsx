@@ -37,8 +37,8 @@ const Header = () => {
           <Link to="/about" className="text-black hover:text-gray-700">
             About
           </Link>
-          <Link to="/projects" className="text-black hover:text-gray-700">
-            Projects
+          <Link to="/project" className="text-black hover:text-gray-700">
+            Project
           </Link>
           <Link to="/contact" className="text-black hover:text-gray-700">
             Contact
@@ -65,8 +65,8 @@ const Header = () => {
           <Link to="/about" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md">
             About
           </Link>
-          <Link to="/projects" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md">
-            Projects
+          <Link to="/project" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md">
+            Project
           </Link>
           <Link to="/contact" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md">
             Contact

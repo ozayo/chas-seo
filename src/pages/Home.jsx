@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import MainHero from '../components/MainHero';
 import Features from '../components/Features';
 import Cta from '../components/Cta';
+import LatestBlogPosts from '../components/LatestBlogPosts';
 
 const Home = () => {
   return (
@@ -20,7 +21,8 @@ const Home = () => {
       </Helmet>
       <MainHero/>
       <Features />
-       <Cta />
+      <Cta />
+      <LatestBlogPosts />
     </>
   );
 }
