@@ -8,8 +8,8 @@ const MainHero = () => {
       <div className="py-6 md:order-1 hidden md:block">
         {/* <img src={heroImg} alt="hero image"/> */}
         <picture>
-          <source srcSet="/hero.webp" type="image/webp" />
-          <img src="/hero.jpg" alt="Hero image" loading="lazy" />
+          <source srcSet="/hero.webp" type="image/webp" width="100%" height="100%" />
+          <img src="/hero.jpg" alt="Hero image" width="100%" height="100%" />
         </picture>
       </div>
       <div>
