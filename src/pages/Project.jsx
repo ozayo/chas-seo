@@ -7,10 +7,13 @@ const Project = () => {
   return (
     <>
       <Helmet>
-        <title>Project - My Website</title>
-        <meta name="description" content="Explore our latest projects and works." />
-        <meta property="og:title" content="Projects - My Website" />
-        <meta property="og:description" content="Discover the latest projects and innovations from our team." />
+        <title>Projects - Chas SEO</title>
+        <meta name="description" content="Discover our latest projects and how Chas SEO has helped businesses grow." />
+        <meta property="og:title" content="Projects - Chas SEO" />
+        <meta property="og:description" content="Discover our latest projects and how Chas SEO has helped businesses grow." />
+        <meta property="og:image" content="https://chas-seo.vercel.app/projects-og-image.png" />
+        <meta property="og:url" content="https://chas-seo.vercel.app/projects" />
+        <link rel="canonical" href="https://chas-seo.vercel.app/projects" />
       </Helmet>
     
        <section className="mt-5 md:mt-16 mb-20 pb-16">

@@ -8,10 +8,13 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact - My Website</title>
-        <meta name="description" content="Get in touch with us via this page." />
-        <meta property="og:title" content="Contact - My Website" />
-        <meta property="og:description" content="Reach out to us for inquiries or collaborations." />
+        <title>Contact - Chas SEO</title>
+        <meta name="description" content="Get in touch with Chas SEO to discuss how we can help your business grow." />
+        <meta property="og:title" content="Contact - Chas SEO" />
+        <meta property="og:description" content="Get in touch with Chas SEO to discuss how we can help your business grow." />
+        <meta property="og:image" content="https://chas-seo.vercel.app/contact-og-image.png" />
+        <meta property="og:url" content="https://chas-seo.vercel.app/contact" />
+        <link rel="canonical" href="https://chas-seo.vercel.app/contact" />
       </Helmet>
       
        <section className="mt-5 md:mt-16 mb-20 pb-16">

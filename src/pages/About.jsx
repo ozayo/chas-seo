@@ -1,13 +1,19 @@
 import { Helmet } from 'react-helmet-async';
 import { FaBriefcase, FaWindowMaximize, FaDatabase, FaRobot, FaFileAlt, FaUsers } from "react-icons/fa";
 import Cta from '../components/Cta';
+import SocialShare from '../components/SocialShare';
 
 const About = () => {
   return (
     <>
       <Helmet>
-        <title>About - Özay Özdemir Portfolio</title>
-        <meta name="description" content="Learn more about Özay Özdemir, a front-end developer and UI/UX designer." />
+        <title>About - Chas SEO</title>
+        <meta name="description" content="Learn more about Chas SEO and what we do." />
+        <meta property="og:title" content="About - Chas SEO" />
+        <meta property="og:description" content="Learn more about Chas SEO and what we do." />
+        <meta property="og:image" content="https://chas-seo.vercel.app/about-og-image.png" />
+        <meta property="og:url" content="https://chas-seo.vercel.app/about" />
+        <link rel="canonical" href="https://chas-seo.vercel.app/about" />
       </Helmet>
 
       <section className="mt-5 md:mt-16 mb-20 pb-16">
@@ -70,6 +76,7 @@ const About = () => {
       </div>
       </section>
       <Cta />
+      <SocialShare />
     </>
   );
 };
