@@ -20,5 +20,4 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 );
 
-// Sayfa yüklendiğinde pageview olayını gönderiyoruz
-ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: document.title });
+
