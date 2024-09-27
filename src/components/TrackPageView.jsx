@@ -1,12 +1,13 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { sendPageview } from 'react-ga4';
+import ReactGA from 'react-ga4';
 
 const TrackPageView = () => {
   const location = useLocation();
 
   useEffect(() => {
-    sendPageview(location.pathname); // Sayfa görüntülenme olayını gönder
+    // Sayfa yüklendiğinde pageview olayını gönderiyoruz
+    ReactGA.send({ hitType: "pageview", page: location.pathname, title: document.title });
   }, [location]);
 
   return null;

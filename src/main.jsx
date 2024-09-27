@@ -2,15 +2,15 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-import { initialize as initializeGA, sendPageview } from 'react-ga4';
+import ReactGA from 'react-ga4'; 
 import TagManager from 'react-gtm-module';
 
-// GA4 Measurement ID ile Google Analytics'i başlat
-initializeGA('G-M7HQ0KT3WR'); // Google Analytics Measurement ID'nizi buraya ekleyin
+// Google Analytics'i başlatıyoruz (GA4 Measurement ID'nizi buraya ekleyin)
+ReactGA.initialize("G-M7HQ0KT3WR");
 
 // GTM Kapsayıcısını başlat
 const tagManagerArgs = {
-  gtmId: 'GTM-M7HQ0KT3WR' // Google Tag Manager ID'nizi buraya ekleyin
+  gtmId: 'GTM-M7HQ0KT3WR', // Google Tag Manager ID'nizi buraya ekleyin
 };
 TagManager.initialize(tagManagerArgs);
 
@@ -20,5 +20,5 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 );
 
-// Sayfa yüklendiğinde pageview olayını gönder
-sendPageview();
+// Sayfa yüklendiğinde pageview olayını gönderiyoruz
+ReactGA.send({ hitType: "pageview", page: window.location.pathname, title: document.title });
