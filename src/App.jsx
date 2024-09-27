@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import Home from './pages/Home';
+import Home from './pages/Home'; // Bileşenleri doğrudan burada import ediyoruz
 import About from './pages/About';
 import Project from './pages/Project';
 import Contact from './pages/Contact';
@@ -30,3 +30,4 @@ function App() {
 }
 
 export default App;
+
