@@ -7,7 +7,7 @@ const Cta = () => {
   const handleCtaClick = () => {
     ReactGA.event({
       category: 'CTA Button',    // Olayın kategorisi
-      action: 'Click',           // Olayın aksiyonu (tıklama)
+      action: 'Click_cta',           // Olayın aksiyonu (tıklama)
       label: 'Contact Us Button On CTA' // Olayın etiketi (butonun adı)
     });
   };

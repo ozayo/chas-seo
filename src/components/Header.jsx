@@ -17,8 +17,8 @@ const Header = () => {
     const linkHref = event.target.href;          // Tıklanan linkin hedef URL'si
 
     ReactGA.event({
-      category: 'Main Menu',   // Olayın kategorisi (main menu olarak ayarladık)
-      action: 'Click',         // Olayın aksiyonu (tıklama)
+      category: 'Main Menu Link',   // Olayın kategorisi (main menu olarak ayarladık)
+      action: 'Click_nav',         // Olayın aksiyonu (tıklama)
       label: linkText,         // Linkin texti olay etiketi olarak gönderiliyor
       value: linkHref          // Opsiyonel: URL de bir değer olarak gönderiliyor
     });
