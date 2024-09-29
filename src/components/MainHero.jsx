@@ -23,7 +23,7 @@ const MainHero = () => {
           <a href="/about" className="flex gap-1 items-center justify-center bg-black text-white px-5 py-3 hover:text-black hover:bg-gray-200">
             About the project
           </a>
-          <a href="https://github.com/surjithctly/astroship" className="flex gap-1 items-center justify-center border-solid border-2 border-black px-5 py-3" target="_blank">
+          <a href="https://github.com/ozayo/chas-seo" className="flex gap-1 items-center justify-center border-solid border-2 border-black px-5 py-3" target="_blank">
             <FaGithub />
             GitHub Repo
           </a>
