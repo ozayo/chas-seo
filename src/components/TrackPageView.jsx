@@ -13,7 +13,7 @@ const TrackPageView = () => {
     // GTM için pageview event'i gönderiyoruz
     TagManager.dataLayer({
       dataLayer: {
-        event: 'pageview',
+        event: 'pageviewgtm',
         page: location.pathname,
         title: document.title,
       },
