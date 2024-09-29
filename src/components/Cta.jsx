@@ -1,4 +1,18 @@
+import React from 'react';
+import ReactGA from 'react-ga4';
+
 const Cta = () => {
+
+  // Event tracking function for the button click
+  const handleCtaClick = () => {
+    ReactGA.event({
+      category: 'CTA Button',    // Olayın kategorisi
+      action: 'Click',           // Olayın aksiyonu (tıklama)
+      label: 'Contact Us Button On CTA' // Olayın etiketi (butonun adı)
+    });
+  };
+
+
   return (
     <section className="bg-black my-11">
       <div className="py-10 px-4 mx-auto max-w-screen-xl">
@@ -11,7 +25,7 @@ const Cta = () => {
           </p>
         </div>
         <div className="flex flex-col items-center">
-          <a className="bg-white px-8 py-3 font-medium hover:bg-gray-200" href="/contact">
+          <a className="bg-white px-8 py-3 font-medium hover:bg-gray-200" href="/contact" onClick={handleCtaClick} >
             Contact us
           </a>
         </div>
