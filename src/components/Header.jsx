@@ -2,12 +2,26 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa'; // React Icons for menu
 import ozayLogo from "../assets/oo-logo.svg"
+import ReactGA from 'react-ga4';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+// Navigation linklerinin tıklanma olayını izleyen fonksiyon
+  const handleNavClick = (event) => {
+    const linkText = event.target.textContent;   // Tıklanan linkin text içeriği
+    const linkHref = event.target.href;          // Tıklanan linkin hedef URL'si
+
+    ReactGA.event({
+      category: 'Main Menu',   // Olayın kategorisi (main menu olarak ayarladık)
+      action: 'Click',         // Olayın aksiyonu (tıklama)
+      label: linkText,         // Linkin texti olay etiketi olarak gönderiliyor
+      value: linkHref          // Opsiyonel: URL de bir değer olarak gönderiliyor
+    });
   };
 
   return (
@@ -31,16 +45,16 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-4" aria-label="Main">
-          <Link to="/" className="text-black hover:text-gray-700">
+          <Link to="/" onClick={handleNavClick} className="text-black hover:text-gray-700">
             Home
           </Link>
-          <Link to="/about" className="text-black hover:text-gray-700">
+          <Link to="/about" onClick={handleNavClick} className="text-black hover:text-gray-700">
             About
           </Link>
-          <Link to="/project" className="text-black hover:text-gray-700">
+          <Link to="/project" onClick={handleNavClick} className="text-black hover:text-gray-700">
             Project
           </Link>
-          <Link to="/contact" className="text-black hover:text-gray-700">
+          <Link to="/contact" onClick={handleNavClick} className="text-black hover:text-gray-700">
             Contact
           </Link>
         </nav>
