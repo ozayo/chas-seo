@@ -7,7 +7,11 @@ const TrackPageView = () => {
 
   useEffect(() => {
     // Sayfa yüklendiğinde pageview olayını gönderiyoruz
-    ReactGA.send({ hitType: "pageview", page: location.pathname, title: document.title });
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname,
+      title: document.title
+    });
   }, [location]);
 
   return null;
