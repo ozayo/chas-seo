@@ -6,15 +6,16 @@ import TagManager from 'react-gtm-module';
 const MainHero = () => {
 
   // Buton tıklama olaylarını yakalama fonksiyonu
-  const handleButtonClick = (buttonId) => {
+  const handleAboutClick = () => {
+    // GTM'e buton tıklama olayını gönderiyoruz
     TagManager.dataLayer({
       dataLayer: {
-        event: 'button_click',  // Ortak event adı
-        button_id: buttonId,    // Butona göre özelleştirilmiş ID
+        event: 'about_button_click',  // Özel event adı
+        button_id: 'mainhero_cta_button', // Butonun ID'si ya da label'ı
       },
     });
 
-    console.log(`${buttonId} clicked, event sent to GTM`);
+    console.log('Button clicked, event sent to GTM');
   };
 
 
@@ -36,10 +37,10 @@ const MainHero = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium praesentium accusamus ullam, neque nostrum.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="/about" onClick={() => handleButtonClick('about_button')} className="flex gap-1 items-center justify-center bg-black text-white px-5 py-3 hover:text-black hover:bg-gray-200">
+          <a href="/about" onClick={handleAboutClick} className="flex gap-1 items-center justify-center bg-black text-white px-5 py-3 hover:text-black hover:bg-gray-200">
             About the project
           </a>
-          <a href="https://github.com/ozayo/chas-seo"  onClick={() => handleButtonClick('github_repo_button')} className="flex gap-1 items-center justify-center border-solid border-2 border-black px-5 py-3" target="_blank">
+          <a href="https://github.com/ozayo/chas-seo" className="flex gap-1 items-center justify-center border-solid border-2 border-black px-5 py-3" target="_blank">
             <FaGithub />
             GitHub Repo
           </a>
