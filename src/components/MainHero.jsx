@@ -1,8 +1,24 @@
 import heroImg from "../assets/hero.svg";
 import { FaGithub } from "react-icons/fa";
+import TagManager from 'react-gtm-module';
 
 
 const MainHero = () => {
+
+  // Buton tıklama olaylarını yakalama fonksiyonu
+  const handleButtonClick = (buttonId) => {
+    TagManager.dataLayer({
+      dataLayer: {
+        event: 'button_click',  // Ortak event adı
+        button_id: buttonId,    // Butona göre özelleştirilmiş ID
+      },
+    });
+
+    console.log(`${buttonId} clicked, event sent to GTM`);
+  };
+
+
+
   return (
     <section className="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
       <div className="py-6 md:order-1 hidden md:block">
@@ -20,10 +36,10 @@ const MainHero = () => {
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium praesentium accusamus ullam, neque nostrum.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
-          <a href="/about" className="flex gap-1 items-center justify-center bg-black text-white px-5 py-3 hover:text-black hover:bg-gray-200">
+          <a href="/about" onClick={() => handleButtonClick('about_button')} className="flex gap-1 items-center justify-center bg-black text-white px-5 py-3 hover:text-black hover:bg-gray-200">
             About the project
           </a>
-          <a href="https://github.com/ozayo/chas-seo" className="flex gap-1 items-center justify-center border-solid border-2 border-black px-5 py-3" target="_blank">
+          <a href="https://github.com/ozayo/chas-seo"  onClick={() => handleButtonClick('github_repo_button')} className="flex gap-1 items-center justify-center border-solid border-2 border-black px-5 py-3" target="_blank">
             <FaGithub />
             GitHub Repo
           </a>
