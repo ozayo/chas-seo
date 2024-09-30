@@ -3,7 +3,6 @@ import MainHero from '../components/MainHero';
 import Features from '../components/Features';
 import Cta from '../components/Cta';
 import LatestBlogPosts from '../components/LatestBlogPosts';
-import SocialShare from '../components/SocialShare';
 
 const Home = () => {
   return (
@@ -21,7 +20,6 @@ const Home = () => {
       <Features />
       <Cta />
       <LatestBlogPosts />
-      <SocialShare />
     </>
   );
 }

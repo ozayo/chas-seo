@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { FaBriefcase, FaWindowMaximize, FaDatabase, FaRobot, FaFileAlt, FaUsers } from "react-icons/fa";
 import Cta from '../components/Cta';
-import SocialShare from '../components/SocialShare';
 
 const About = () => {
   return (
@@ -76,7 +75,6 @@ const About = () => {
       </div>
       </section>
       <Cta />
-      <SocialShare />
     </>
   );
 };
