@@ -7,6 +7,7 @@ import Project from './pages/Project';
 import Contact from './pages/Contact';
 import Header from './components/Header'; 
 import Footer from './components/Footer';
+import Weather from './pages/Weather';
 import TrackPageView from './components/TrackPageView';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/project" element={<Project />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/weather" element={<Weather />} />
             </Routes>
           </main>
           <Footer />
