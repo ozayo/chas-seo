@@ -4,6 +4,8 @@ import App from './App.jsx';
 import './index.css';
 import ReactGA from 'react-ga4'; 
 import TagManager from 'react-gtm-module';
+import { Provider } from 'react-redux';
+import { store } from './store';
 
 // Google Analytics'i başlatıyoruz (GA4 Measurement ID'nizi buraya ekleyin)
 ReactGA.initialize("G-M7HQ0KT3WR");
@@ -16,7 +18,9 @@ TagManager.initialize(tagManagerArgs);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </StrictMode>,
 );
 
