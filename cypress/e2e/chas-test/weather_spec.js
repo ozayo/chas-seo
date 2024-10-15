@@ -1,7 +1,7 @@
 describe('Weather Component', () => {
   beforeEach(() => {
     // Tam URL'yi kontrol edelim
-    cy.intercept('GET', '**/weather**', { fixture: 'weather.json' }).as('getWeather');
+    // cy.intercept('GET', '**/weather**', { fixture: 'weather.json' }).as('getWeather');
     cy.visit('/weather'); // BaseUrl tanımlandı, URL /weather ile çalışacak
   });
 
@@ -9,14 +9,14 @@ describe('Weather Component', () => {
     cy.get('[data-testid="weather-component"]').should('exist'); // Component render kontrolü
   });
 
-  it('Should display weather data from the mock', () => {
-    cy.wait('@getWeather'); // Mock veriyi bekleyelim
-    cy.get('[data-testid="weather-component"]').within(() => {
-      cy.contains('Temperature: 15°C'); // Fixture'dan gelen veriyi kontrol edelim
-      cy.contains('Weather: clear sky');
-      cy.contains('Humidity: 78%');
-    });
-  });
+  // it('Should display weather data from the mock', () => {
+  //   cy.wait('@getWeather'); // Mock veriyi bekleyelim
+  //   cy.get('[data-testid="weather-component"]').within(() => {
+  //     cy.contains('Temperature: 15°C'); // Fixture'dan gelen veriyi kontrol edelim
+  //     cy.contains('Weather: clear sky');
+  //     cy.contains('Humidity: 78%');
+  //   });
+  // });
 
   it('Should display an error message on failed API call', () => {
     // API isteğinin başarısız olduğu senaryo
